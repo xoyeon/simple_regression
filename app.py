@@ -26,7 +26,7 @@ def user_input_features() :
 
 st.title('네트워크 VOC 예측')
 st.markdown('아래의 slider를 움직여 값을 입력하시오')
-st.caption('민원내용에 따른 등급: 0은 aclass, 1는 bclass, 2는 sclass 민원')
+st.text("민원 내용 0은 aclass, 1는 bclass, 2는 sclass 내용의 민원")
 
 le = joblib.load("le.pkl")
 scaler_call = joblib.load("scaler.pkl")
@@ -41,5 +41,5 @@ new_x_transformed = scaler_call.transform(new_x_df)
 new_pred = model_call.predict(new_x_transformed)
 
 #예측결과를 화면에 뿌려준다. 
-st.subheader('결과는 다음과 같습니다.')
+st.subheader('민원 내용의 결과 확인하기')
 st.write('민원 내용:', new_pred[0])
