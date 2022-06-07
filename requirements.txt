@@ -1,10 +1,4 @@
+streamlit 
+numpy 
+pandas 
 joblib
-matplotlib
-numpy
-pandas
-plotly
-ply
-ptyprocess
-seaborn
-streamlit
-scikit-learn
